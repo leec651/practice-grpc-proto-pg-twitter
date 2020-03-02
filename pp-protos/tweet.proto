@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "tweet_types.proto";
+
+service Tweet {
+  rpc Tweet (tweet.TweetRequest) returns (tweet.TweetReply);
+  rpc Spam (stream tweet.TweetRequest) returns (stream tweet.TweetReply);
+  rpc DeleteTweet (tweet.DeleteTweetRequest) returns (tweet.EmptyReply);
+  rpc GetTweet (tweet.GetTweetRequest) returns (tweet.TweetReply);
+  rpc GetTweets (tweet.GetTweetsRequest) returns (stream tweet.TweetReply);
+}

@@ -1,0 +1,56 @@
+
+
+syntax = "proto3";
+package user;
+
+import "google/protobuf/timestamp.proto";
+
+message User {
+  int64 id = 1;
+  string email = 2;
+  string api_key = 3;
+  string phone = 4;
+  string name = 5;
+  float latitude = 6;
+  float longtitude = 7;
+  google.protobuf.Timestamp created_at = 8;
+  google.protobuf.Timestamp last_login_at = 9;
+}
+
+message UserReply {
+  User user = 1;
+}
+
+message SignUpRequest {
+  string email = 1;
+  string password = 2;
+  string phone = 3;
+  string name = 4;
+  float latitude = 5;
+  float longtitude = 6;
+}
+
+message TokenReply {
+  string token = 1;
+}
+
+message GetUserRequest {
+  int64 user_id = 1;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message FollowRequest {
+  int64 followee_user_id = 1;
+}
+
+message UnfollowRequest {
+  int64 followee_user_id = 1;
+}
+
+
+message EmptyReply {
+}

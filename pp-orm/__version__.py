@@ -1,0 +1,10 @@
+__title__ = 'pp-orm'
+__description__ = 'Object Relational Mapper'
+__url__ = 'http://python-requests.org'
+__version__ = '1.0.0'
+__build__ = None
+__author__ = 'Chen Wei Lee'
+__author_email__ = 'leec651@gmail.com'
+__license__ = None
+__copyright__ = None
+__cake__ = None

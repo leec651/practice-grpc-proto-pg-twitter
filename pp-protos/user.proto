@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "user_types.proto";
+
+// it will attach Servicer to the end -> UsersServicerbbh
+service User {
+  rpc SignUp (user.SignUpRequest) returns (user.TokenReply);
+  rpc GetUser (user.GetUserRequest) returns (user.UserReply);
+  rpc Login (user.LoginRequest) returns (user.TokenReply);
+  rpc Follow (user.FollowRequest) returns (user.EmptyReply);
+  rpc Unfollow (user.UnfollowRequest) returns (user.EmptyReply);
+}

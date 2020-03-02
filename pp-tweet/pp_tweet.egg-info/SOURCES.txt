@@ -1,0 +1,7 @@
+README.md
+setup.py
+pp_tweet.egg-info/PKG-INFO
+pp_tweet.egg-info/SOURCES.txt
+pp_tweet.egg-info/dependency_links.txt
+pp_tweet.egg-info/requires.txt
+pp_tweet.egg-info/top_level.txt

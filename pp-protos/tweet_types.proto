@@ -1,0 +1,43 @@
+syntax = "proto3";
+package tweet;
+
+import "google/protobuf/timestamp.proto";
+
+message Tweet {
+  int64 id = 1;
+  int64 user_id = 2;
+  string content = 3;
+  float latitude = 4;
+  float longtitude = 5;
+  int32 num_favorites = 6;
+  google.protobuf.Timestamp created_at = 7;
+}
+
+message TweetReply {
+  Tweet tweet = 1;
+}
+
+message TweetRequest {
+  string content = 1;
+  float latitude = 2;
+  float longtitude = 3;
+}
+
+message GetTweetRequest {
+  int64 tweet_id = 1;
+}
+
+message DeleteTweetRequest {
+  int64 tweet_id = 1;
+}
+
+message GetTweetsRequest {
+  int64 user_id = 1;
+  int32 limit = 2;
+  oneof filter {
+    int32 offset = 3;
+    google.protobuf.Timestamp created_at = 4;
+  }
+}
+
+message EmptyReply {}
